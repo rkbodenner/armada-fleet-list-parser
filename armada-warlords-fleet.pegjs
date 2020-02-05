@@ -1,5 +1,5 @@
 start
-  = ListName Author Faction Points Commander Objectives Ship* SquadronCost
+  = ListName Author Faction Points Commander Objectives Ship* Squadrons
 
 ListName
   = name:AuthorName [ \n\t]* { return name; }
@@ -46,8 +46,14 @@ Cost
 TotalCost
   = "=" _ totalCost:Integer _ "total ship cost" _ [\n]? { return totalCost; }
 
+Squadrons
+  = squads:Squadron* totalSquadronCost:SquadronCost _ [\n]? { return {squads, totalSquadronCost}; }
+
+Squadron
+  = count:Integer _ name:Name _ cost:Cost _ [\n]? { return {count, name, cost}; }
+
 SquadronCost
-  = "=" _ totalSquadronCost:Integer _ "total squadron cost" [\n]* { return {totalSquadronCost}; }
+  = "=" _ cost:Integer _ "total squadron cost" [\n]* { return cost; }
 
 NameVariant
   = "com"/"off"
