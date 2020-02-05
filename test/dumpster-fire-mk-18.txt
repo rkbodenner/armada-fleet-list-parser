@@ -1,0 +1,44 @@
+Dumpster Fire Mk 18 
+	
+Author: shmitty
+
+Faction: Rebel Alliance	
+Points: 400/400	
+ 
+
+Commander: Garm Bel Iblis
+
+Assault Objective: Ion Storm	
+Defense Objective: Contested Outpost	
+Navigation Objective: Hyperspace Migration	
+
+
+CR90 Corvette A (44 points)
+-  Jainas Light	 ( 2	 points) 
+= 46 total ship cost
+
+
+[ flagship ] MC80 Star Cruiser (96 points)
+-  Garm Bel Iblis	 ( 25	 points) 
+-  Strategic Adviser	 ( 4	 points) 
+-  Engine Techs	 ( 8	 points) 
+= 133 total ship cost
+
+
+Modified Pelta-class Command Ship (60 points)
+-  Toryn Farr	 ( 7	 points) 
+-  Intensify Firepower!	 ( 6	 points) 
+= 73 total ship cost
+
+
+Nebulon-B Escort Frigate (57 points)
+-  Yavaris	 ( 5	 points) 
+-  Ahsoka Tano	 ( 2	 points) 
+= 64 total ship cost
+
+
+1	Jan Ors ( 19 points) 
+2	Y-Wing Squadrons ( 20 points) 
+1	Biggs Darklighter ( 19 points) 
+2	X-Wing Squadrons ( 26 points) 
+= 84 total squadron cost
