@@ -29,7 +29,10 @@ ObjectiveType
   = "Assault"/"Defense"/"Navigation"
 
 Ship
-  = shipVar:ShipVariant upg:Upgrade* cost:TotalCost [\n]* { return {shipVar: shipVar, upg: upg, cost: cost}; }
+  = flagship:Flagship? shipVar:ShipVariant upg:Upgrade* cost:TotalCost [\n]* { return {flagship, shipVar, upg, cost}; }
+
+Flagship
+  = "[" _ "flagship" _ "]" { return true; }
 
 ShipVariant
   = name:Name _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
