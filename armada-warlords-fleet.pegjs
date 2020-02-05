@@ -1,5 +1,20 @@
 start
-  = Commander Objectives Ship*
+  = ListName Author Faction Points Commander Objectives Ship*
+
+ListName
+  = name:AuthorName [ \n\t]* { return name; }
+
+Author
+  = "Author:" _ name:AuthorName _ [\n]* { return name; }
+
+Faction
+  = "Faction:" _ value:FactionValue _ [\n]* { return value; }
+
+FactionValue
+  = "Rebel Alliance"/"Galactic Empire"
+
+Points
+  = "Points:" _ points:Integer "/" max:Integer [ \n\t]* { return {points, max}; }
 
 Commander
   = "Commander:" _ name:Name [\n]* { return name; }
@@ -33,6 +48,9 @@ NameVariant
 
 Name
   = [-a-zA-Z0-9! ]+ _ ("(" NameVariant ")")? { return text(); }
+
+AuthorName
+  = [-_a-zA-Z0-9! ]+ { return text(); }
 
 Integer "integer"
   = [0-9]+ { return parseInt(text(), 10); }
