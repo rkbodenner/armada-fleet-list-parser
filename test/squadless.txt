@@ -1,0 +1,50 @@
+Hawk Pelta Admo 
+	
+Author: eb0n_hawk
+
+Faction: Rebel Alliance	
+Points: 392/400	
+ 
+
+Commander: Kyrsta Agate (com)
+
+Assault Objective: Advanced Gunnery	
+Defense Objective: Contested Outpost	
+Navigation Objective: Solar Corona	
+
+
+[ flagship ] Starhawk-class Battleship Mark II (150 points)
+-  Kyrsta Agate (com)	 ( 20	 points) 
+-  Unity	 ( 10	 points) 
+-  General Draven	 ( 3	 points) 
+-  Walex Blissex	 ( 5	 points) 
+-  Local Fire Control	 ( 4	 points) 
+-  Proximity Mines	 ( 4	 points) 
+-  Linked Turbolaser Towers	 ( 7	 points) 
+= 203 total ship cost
+
+
+Modified Pelta-class Assault Ship (56 points)
+-  Phoenix Home	 ( 3	 points) 
+-  Raymus Antilles	 ( 7	 points) 
+-  Toryn Farr	 ( 7	 points) 
+-  External Racks	 ( 3	 points) 
+-  Intensify Firepower!	 ( 6	 points) 
+= 82 total ship cost
+
+
+MC30c Torpedo Frigate (63 points)
+-  Admonition	 ( 8	 points) 
+-  Lando Calrissian (off)	 ( 4	 points) 
+-  Ordnance Experts	 ( 4	 points) 
+-  External Racks	 ( 3	 points) 
+= 82 total ship cost
+
+
+GR-75 Medium Transports (18 points)
+-  Leia Organa (off)	 ( 3	 points) 
+-  Repair Crews	 ( 4	 points) 
+= 25 total ship cost
+
+
+= 0 total squadron cost
