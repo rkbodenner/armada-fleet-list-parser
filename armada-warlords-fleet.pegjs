@@ -1,5 +1,14 @@
 start
-  = ship:Ship*
+  = Objectives ship:Ship*
+
+Objectives
+  = Objective Objective Objective [\n]*
+
+Objective
+  = type:ObjectiveType _ "Objective:" _ name:Name _ [\n]? { return {type: type, name: name}; }
+
+ObjectiveType
+  = "Assault"/"Defense"/"Navigation"
 
 Ship
   = shipVar:ShipVariant upg:Upgrade* cost:TotalCost [\n]* { return {shipVar: shipVar, upg: upg, cost: cost}; }
@@ -24,4 +33,3 @@ Integer "integer"
 
 _ "whitespace"
   = [ \t]*
-  
