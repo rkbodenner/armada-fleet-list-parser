@@ -1,5 +1,8 @@
 start
-  = Objectives ship:Ship*
+  = Commander Objectives Ship*
+
+Commander
+  = "Commander:" _ name:Name [\n]* { return name; }
 
 Objectives
   = Objective Objective Objective [\n]*
@@ -25,8 +28,11 @@ Cost
 TotalCost
   = "=" _ totalCost:Integer _ "total ship cost" _ [\n]? { return totalCost; }
 
+NameVariant
+  = "com"/"off"
+
 Name
-  = [-a-zA-Z0-9! ]+ { return text(); }
+  = [-a-zA-Z0-9! ]+ _ ("(" NameVariant ")")? { return text(); }
 
 Integer "integer"
   = [0-9]+ { return parseInt(text(), 10); }
