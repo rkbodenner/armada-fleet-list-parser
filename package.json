@@ -1,0 +1,25 @@
+{
+  "name": "armada-fleet-list-parser",
+  "version": "0.0.1",
+  "description": "Parse fleet lists for Star Wars Armada",
+  "main": "armada-warlords-fleet.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkbodenner/armada-fleet-list-parser.git"
+  },
+  "author": "Ralph Bodenner <rkbodenner+github@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rkbodenner/armada-fleet-list-parser/issues"
+  },
+  "homepage": "https://github.com/rkbodenner/armada-fleet-list-parser#readme",
+  "dependencies": {
+    "mocha": "^7.0.1"
+  }
+}
