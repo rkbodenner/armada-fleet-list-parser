@@ -59,7 +59,13 @@ NameVariant
   = "com"/"off"
 
 CardName
-  = Name _ ("(" NameVariant ")")? { return text(); }
+  = name:Name _ variant:(("(" NameVariant ")")?) {
+  	if (variant) {
+      return name.concat(" ", variant.join(""));
+    } else {
+      return name;
+    }
+  }
 
 Name
   = words:(NameWord)* [ \n\t]* { return words.join(" "); }

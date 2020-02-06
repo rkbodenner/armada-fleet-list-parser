@@ -203,7 +203,13 @@ function peg$parse(input, options) {
       peg$c59 = peg$literalExpectation("off", false),
       peg$c60 = ")",
       peg$c61 = peg$literalExpectation(")", false),
-      peg$c62 = function() { return text(); },
+      peg$c62 = function(name, variant) {
+        	if (variant) {
+            return name.concat(" ", variant.join(""));
+          } else {
+            return name;
+          }
+        },
       peg$c63 = function(words) { return words.join(" "); },
       peg$c64 = /^[\-_a-zA-Z0-9!]/,
       peg$c65 = peg$classExpectation(["-", "_", ["a", "z"], ["A", "Z"], ["0", "9"], "!"], false, false),
@@ -1561,7 +1567,7 @@ function peg$parse(input, options) {
         }
         if (s3 !== peg$FAILED) {
           peg$savedPos = s0;
-          s1 = peg$c62();
+          s1 = peg$c62(s1, s3);
           s0 = s1;
         } else {
           peg$currPos = s0;
