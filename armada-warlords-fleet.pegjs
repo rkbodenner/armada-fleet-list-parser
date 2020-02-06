@@ -2,10 +2,10 @@ start
   = ListName Author Faction Points Commander Objectives Ship* Squadrons
 
 ListName
-  = name:AuthorName [ \n\t]* { return name; }
+  = name:Name [ \n\t]* { return name; }
 
 Author
-  = "Author:" _ name:AuthorName _ [\n]* { return name; }
+  = "Author:" _ name:Name _ [\n]* { return name; }
 
 Faction
   = "Faction:" _ value:FactionValue _ [\n]* { return value; }
@@ -17,13 +17,13 @@ Points
   = "Points:" _ points:Integer "/" max:Integer [ \n\t]* { return {points, max}; }
 
 Commander
-  = "Commander:" _ name:Name [\n]* { return name; }
+  = "Commander:" _ name:CardName [\n]* { return name; }
 
 Objectives
-  = Objective Objective Objective [\n]*
+  = objs:(Objective Objective Objective) [\n]* { return objs; }
 
 Objective
-  = type:ObjectiveType _ "Objective:" _ name:Name _ [\n]? { return {type: type, name: name}; }
+  = type:ObjectiveType _ "Objective:" _ name:Name _ [\n]* { return {type: type, name: name}; }
 
 ObjectiveType
   = "Assault"/"Defense"/"Navigation"
@@ -32,13 +32,13 @@ Ship
   = flagship:Flagship? shipVar:ShipVariant upg:Upgrade* cost:TotalCost [\n]* { return {flagship, shipVar, upg, cost}; }
 
 Flagship
-  = "[" _ "flagship" _ "]" { return true; }
+  = "[" _ "flagship" _ "]" _ { return true; }
 
 ShipVariant
   = name:Name _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
 
 Upgrade
-  = "-" _ name:Name _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
+  = "-" _ name:CardName _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
 
 Cost
   = "(" _ cost:Integer _ "points)" _ [\n]? { return cost; }
@@ -50,7 +50,7 @@ Squadrons
   = squads:Squadron* totalSquadronCost:SquadronCost _ [\n]? { return {squads, totalSquadronCost}; }
 
 Squadron
-  = count:Integer _ name:Name _ cost:Cost _ [\n]? { return {count, name, cost}; }
+  = count:Integer _ name:CardName _ cost:Cost _ [\n]? { return {count, name, cost}; }
 
 SquadronCost
   = "=" _ cost:Integer _ "total squadron cost" [\n]* { return cost; }
@@ -58,11 +58,14 @@ SquadronCost
 NameVariant
   = "com"/"off"
 
-Name
-  = [-a-zA-Z0-9! ]+ _ ("(" NameVariant ")")? { return text(); }
+CardName
+  = Name _ ("(" NameVariant ")")? { return text(); }
 
-AuthorName
-  = [-_a-zA-Z0-9! ]+ { return text(); }
+Name
+  = words:(NameWord)* [ \n\t]* { return words.join(" "); }
+
+NameWord
+  = chars:[-_a-zA-Z0-9!]+ _ { return chars.join(""); }
 
 Integer "integer"
   = [0-9]+ { return parseInt(text(), 10); }
