@@ -1,0 +1,37 @@
+Raddeux Lib V4 (399/400)
+Rebels  - Author: Ralph Bodenner
+
+Commander: Admiral Raddus
+
+Objectives: Surprise Attack, Salvage Run, Asteroid Tactics
+
+[flagship] MC75 Armored Cruiser (104)
+ - Admiral Raddus (26)
+ - Profundity (7)
+ - Electronic Counter Measures (7)
+ - Advanced Transponder Net (5)
+ - Lando Calrissian (4)
+ - Ordnance Pods (3)
+ - Ordnance Experts (4)
+= 160 total points
+
+Hammerhead Torpedo Corvette (36)
+ - Cham Syndulla (5)
+ - External Racks (3)
+= 44 total points
+
+GR-75 Medium Transports (18)
+ - Comms Net (2)
+= 20 total points
+
+MC80 Liberty Star Cruiser (96)
+ - Mon Karren (8)
+ - SW-7 Ion Batteries (5)
+ - Caitken and Shollan (6)
+= 115 total points
+
+Squadrons (60/134):
+1x Dutch Vander Y-Wing Squadron (16)
+1x Y-Wing Squadron (10)
+1x VCX-100 Freighter (15)
+1x Wedge Antilles X-Wing Squadron (19)
