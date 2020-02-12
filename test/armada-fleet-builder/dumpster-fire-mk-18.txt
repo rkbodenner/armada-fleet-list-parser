@@ -3,6 +3,8 @@ Rebels  - Author: schmitty
 
 Commander: Garm Bel Iblis
 
+Objectives: Ion Storm, Contested Outpost, Hyperspace Migration
+
 [flagship] MC80 Liberty Star Cruiser (96)
  - Garm Bel Iblis (25)
  - Strategic Adviser (4)
