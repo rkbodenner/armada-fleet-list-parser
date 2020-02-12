@@ -1,0 +1,38 @@
+Name: Untitled Fleet
+Faction: Rebel
+Commander: Mon Mothma
+
+Assault: Ion Storm
+Defense: Abandoned Mining Facility
+Navigation: Doomed Station
+
+Starhawk Battleship Mark I (140)
+• Mon Mothma (30)
+• Kyrsta Agate (5)
+• Strategic Adviser (4)
+• Proximity Mines (4)
+• High-Capacity Ion Turbines (8)
+• Magnite Crystal Tractor Beam Array (10)
+• Amity (6)
+= 207 Points
+
+MC30c Torpedo Frigate (63)
+• Expert Shield Tech (5)
+• Ordnance Experts (4)
+• Foresight (8)
+= 80 Points
+
+GR-75 Medium Transports (18)
+• Ezra Bridger (3)
+• Slicer Tools (7)
+• Quantum Storm (1)
+= 29 Points
+
+Squadrons:
+• Mart Mattin (22)
+• Corran Horn (22)
+• Ketsu Onyo (22)
+• Rogue Squadron (14)
+= 80 Points
+
+Total Points: 396
