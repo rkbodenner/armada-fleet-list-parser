@@ -1,5 +1,13 @@
 start
-  = ListName Author Faction Points Commander Objectives Ship* Squadrons
+  = name:ListName author:Author faction:Faction pts:Points commander:Commander objectives:Objectives ships:Ship* sqd:Squadrons {
+    var points = pts.points;
+    var max_points = pts.max_points;
+
+    var squadrons = sqd.squads;
+    var squadron_points = sqd.points;
+
+    return {name, author, faction, points, max_points, squadron_points, commander, objectives, ships, squadrons};
+  }
 
 ListName
   = name:Name [ \n\t]* { return name; }
@@ -14,7 +22,7 @@ FactionValue
   = "Rebel Alliance"/"Galactic Empire"
 
 Points
-  = "Points:" _ points:Integer "/" max:Integer [ \n\t]* { return {points, max}; }
+  = "Points:" _ points:Integer "/" max_points:Integer [ \n\t]* { return {points, max_points}; }
 
 Commander
   = "Commander:" _ name:CardName [\n]* { return name; }
@@ -29,16 +37,19 @@ ObjectiveType
   = "Assault"/"Defense"/"Navigation"
 
 Ship
-  = flagship:Flagship? shipVar:ShipVariant upg:Upgrade* cost:TotalCost [\n]* { return {flagship, shipVar, upg, cost}; }
+  = flagship:Flagship? ship_class:ShipClass upgrades:Upgrade* points:TotalCost [\n]* {
+    if (flagship) { return { flagship, ship_class, upgrades, points }; }
+    else          { return {           ship_class, upgrades, points }; }
+  }
 
 Flagship
   = "[" _ "flagship" _ "]" _ { return true; }
 
-ShipVariant
-  = name:Name _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
+ShipClass
+  = name:Name _ points:Cost _ [\n]? { return {name: name, points: points}; }
 
 Upgrade
-  = "-" _ name:CardName _ cost:Cost _ [\n]? { return {name: name, cost: cost}; }
+  = "-" _ name:CardName _ points:Cost _ [\n]? { return {name: name, points: points}; }
 
 Cost
   = "(" _ cost:Integer _ "points)" _ [\n]? { return cost; }
@@ -47,7 +58,7 @@ TotalCost
   = "=" _ totalCost:Integer _ "total ship cost" _ [\n]? { return totalCost; }
 
 Squadrons
-  = squads:Squadron* totalSquadronCost:SquadronCost _ [\n]? { return {squads, totalSquadronCost}; }
+  = squads:Squadron* points:SquadronCost _ [\n]? { return {squads, points}; }
 
 Squadron
   = count:Integer _ name:CardName _ cost:Cost _ [\n]? { return {count, name, cost}; }
