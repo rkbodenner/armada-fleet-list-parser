@@ -8,7 +8,7 @@ Faction
   = _ "Faction:" _ value:FactionValue _ [\n]* { return value; }
 
 FactionValue
-  = "Rebel"/"Empire"
+  = "Rebel"/"Imperial"
 
 Commander
   = "Commander:" _ name:CardName [\n]* { return name; }
@@ -41,7 +41,16 @@ Squadrons
   = "Squadrons:" [\n]* squads:Squadron* totalSquadronCost:TotalCost _ [\n]? { return {squads, totalSquadronCost}; }
 
 Squadron
-  = "•" _ name:CardName _ cost:Cost _ [\n]? { return {name, cost}; }
+  = "•" _ count:SquadronCount? _ name:CardName _ cost:Cost _ [\n]? {
+    if ( count === null ) {
+      count = 1;
+    }
+    cost = cost / count;
+    return {name, count, cost};
+  }
+
+SquadronCount
+  = count:Integer _ "x" { return count; }
 
 SquadronCost
   = "=" _ cost:Integer _ "total squadron cost" [\n]* { return cost; }

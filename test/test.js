@@ -34,5 +34,11 @@ describe("Ryan Kingston's", function() {
         parser.parse(list.toString("utf8"));
       });
     });
+    it("Should parse no-obj-no-com-multi-squad", function() {
+      var list = fs.readFileSync("test/ryan-kingston/no-obj-no-com-multi-squad.txt");
+      assert.doesNotThrow(() => {
+        parser.parse(list.toString("utf8"));
+      });
+    });
   });
 });

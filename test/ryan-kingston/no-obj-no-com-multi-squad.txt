@@ -1,0 +1,26 @@
+Name: Untitled Fleet
+Faction: Imperial
+Commander:
+
+Assault:
+Defense:
+Navigation:
+
+Raider II (48)
+• Disposable Capacitors (3)
+• Heavy Ion Emplacements (9)
+= 60 Points
+
+Victory II (85)
+• Defense Liaison (3)
+• Gunnery Team (7)
+• Boosted Comms (4)
+• Harrow (3)
+= 102 Points
+
+Squadrons:
+• 2 x TIE Bomber Squadron (18)
+• Captain Jonus (16)
+= 34 Points
+
+Total Points: 196
