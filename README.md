@@ -3,8 +3,9 @@ Parse fleet lists for Star Wars: Armada
 
 This module includes parsers for the text export formats used by some popular list-building apps for Armada:
 - Ryan Kingston's Armada Fleet Builder (https://armada.ryankingston.com)
-- Armada Warlords (https://armadawarlords.hivelabs.solutions)
 - Armada Fleet Builder, an iOS and Android app
+- Armada Warlords (https://armadawarlords.hivelabs.solutions)
+- Flagship (https://flagship.barronsoftware.com)
 
 The parsers return a JSON structure encoding the fleet list, including ships, upgrades, squadrons, objectives, and other data.
 
