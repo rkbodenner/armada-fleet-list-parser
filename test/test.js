@@ -4,6 +4,7 @@ const assert = require("assert");
 const warlordsParser = require("../armada-warlords-fleet.js");
 const kingstonParser = require("../ryan-kingston-fleet.js");
 const afbParser = require("../armada-fleet-builder-fleet.js");
+const flagshipParser = require("../flagship-fleet.js");
 
 describe("Armada Warlords", function() {
   var parser = warlordsParser;
@@ -55,6 +56,18 @@ describe("Armada Fleet Builder", function() {
   describe("Well-formed lists", function() {
     it("Should parse raddeux-lib-v4", function() {
       var list = fs.readFileSync("test/armada-fleet-builder/raddeux-lib-v4.txt");
+      assert.doesNotThrow(() => {
+        parser.parse(list.toString("utf8"));
+      });
+    });
+  });
+});
+
+describe("Flagship", function() {
+  var parser = flagshipParser;
+  describe("Well-formed lists", function() {
+    it("Should parse dumpster-fire-mk-18", function() {
+      var list = fs.readFileSync("test/flagship/dumpster-fire-mk-18.txt");
       assert.doesNotThrow(() => {
         parser.parse(list.toString("utf8"));
       });

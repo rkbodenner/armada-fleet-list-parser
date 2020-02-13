@@ -1,0 +1,35 @@
+Dumpster Fire Mk 18
+
+Author: schmitty
+Faction: Rebels
+Commander: Garm Bel Iblis
+
+Assault Objective: Ion Storm
+Defense Objective: Contested Outpost
+Navigation Objective: Hyperspace Migration
+
+[flagship] MC80 Star Cruiser (96)
+- Garm Bel Iblis (25)
+- Strategic Adviser (4)
+- Engine Techs (8)
+= 133 points
+
+CR90A Corvette (44)
+- Jaina's Light (2)
+= 46 points
+
+Modified Pelta-Class Command Ship (60)
+- Intensify Firepower! (6)
+- Toryn Farr (7)
+= 73 points
+
+Nebulon-B Escort Frigate (57)
+- Yavaris (5)
+- Ahsoka Tano (2)
+= 64 points
+
+1 Jan Ors (19)
+2 Y-Wing Squadron (10)
+1 Biggs Darklighter (19)
+2 X-Wing Squadron (13)
+= 84 points
