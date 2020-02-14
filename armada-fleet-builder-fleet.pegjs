@@ -56,13 +56,6 @@ NavigationObjective
     return {type, name};
   }
 
-
-Objective
-  = type:ObjectiveType _ "Objective:" _ name:Name _ [\n]* { return {type: type, name: name}; }
-
-ObjectiveType
-  = "Assault"/"Defense"/"Navigation"
-
 Ship
   = flagship:Flagship? ship_class:ShipClass upgrades:Upgrade* points:TotalCost [\n]* {
     if (flagship) { return { flagship, ship_class, upgrades, points }; }
