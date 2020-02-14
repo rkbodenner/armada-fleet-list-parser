@@ -6,6 +6,7 @@ This module includes parsers for the text export formats used by some popular li
 - Armada Fleet Builder, an iOS and Android app
 - Armada Warlords (https://armadawarlords.hivelabs.solutions)
 - Flagship (https://flagship.barronsoftware.com)
+- Armada Fleets Designer, a web and Android app (https://swm-dmb.blogspot.com)
 
 The parsers return a JSON structure encoding the fleet list, including ships, upgrades, squadrons, objectives, and other data.
 

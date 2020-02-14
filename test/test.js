@@ -5,6 +5,7 @@ const warlordsParser = require("../armada-warlords-fleet.js");
 const kingstonParser = require("../ryan-kingston-fleet.js");
 const afbParser = require("../armada-fleet-builder-fleet.js");
 const flagshipParser = require("../flagship-fleet.js");
+const afdParser = require("../armada-fleets-designer-fleet.js");
 
 describe("Armada Warlords", function() {
   var parser = warlordsParser;
@@ -68,6 +69,18 @@ describe("Flagship", function() {
   describe("Well-formed lists", function() {
     it("Should parse dumpster-fire-mk-18", function() {
       var list = fs.readFileSync("test/flagship/dumpster-fire-mk-18.txt");
+      assert.doesNotThrow(() => {
+        parser.parse(list.toString("utf8"));
+      });
+    });
+  });
+});
+
+describe("Armada Fleets Designer", function() {
+  var parser = afdParser;
+  describe("Well-formed lists", function() {
+    it("Should parse dumpster-fire-mk-18", function() {
+      var list = fs.readFileSync("test/armada-fleets-designer/dumpster-fire-mk-18.txt");
       assert.doesNotThrow(() => {
         parser.parse(list.toString("utf8"));
       });
