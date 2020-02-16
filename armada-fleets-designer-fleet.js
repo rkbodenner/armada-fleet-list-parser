@@ -150,7 +150,7 @@ function peg$parse(input, options) {
           var points = pts.points;
           var max_points = pts.max_points;
 
-      	var p = extractSquadsFromShips(ships, squadrons, squadron_points);
+      	  var p = extractSquadsFromShips(ships, squadrons, squadron_points);
 
           return {name, points, max_points, squadron_points, objectives, ships, squadrons};
         },

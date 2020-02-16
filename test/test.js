@@ -9,18 +9,20 @@ const afdParser = require("../armada-fleets-designer-fleet.js");
 
 describe("Armada Warlords", function() {
   var parser = warlordsParser;
+  var dirName = "test/warlords";
+
   describe("Well-formed lists", function() {
-    it("Should parse squadless", function() {
-      var list = fs.readFileSync("test/warlords/squadless.txt");
-      assert.doesNotThrow(() => {
-        parser.parse(list.toString("utf8"));
-      });
-    });
-    it("Should parse dumpster-fire-mk-18", function() {
-      var list = fs.readFileSync("test/warlords/dumpster-fire-mk-18.txt");
-      assert.doesNotThrow(() => {
-        parser.parse(list.toString("utf8"));
-      });
+    var files = fs.readdirSync(dirName);
+    files.forEach(function(file) {
+      var filePath = dirName.concat("/", file)
+      if ( fs.statSync(filePath).isFile() ) {
+        it("should parse ".concat(file), function() {
+          var list = fs.readFileSync(filePath);
+          assert.doesNotThrow(() => {
+            parser.parse(list.toString("utf8"));
+          });
+        });
+      }
     });
   });
 
@@ -36,18 +38,20 @@ describe("Armada Warlords", function() {
 
 describe("Ryan Kingston's", function() {
   var parser = kingstonParser;
+  var dirName = "test/ryan-kingston";
+
   describe("Well-formed lists", function() {
-    it("Should parse starhawk", function() {
-      var list = fs.readFileSync("test/ryan-kingston/starhawk.txt");
-      assert.doesNotThrow(() => {
-        parser.parse(list.toString("utf8"));
-      });
-    });
-    it("Should parse no-obj-no-com-multi-squad", function() {
-      var list = fs.readFileSync("test/ryan-kingston/no-obj-no-com-multi-squad.txt");
-      assert.doesNotThrow(() => {
-        parser.parse(list.toString("utf8"));
-      });
+    var files = fs.readdirSync(dirName);
+    files.forEach(function(file) {
+      var filePath = dirName.concat("/", file)
+      if ( fs.statSync(filePath).isFile() ) {
+        it("should parse ".concat(file), function() {
+          var list = fs.readFileSync(filePath);
+          assert.doesNotThrow(() => {
+            parser.parse(list.toString("utf8"));
+          });
+        });
+      }
     });
   });
 });
