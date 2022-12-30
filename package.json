@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/rkbodenner/armada-fleet-list-parser#readme",
   "dependencies": {
-    "mocha": "^7.0.1"
+    "mocha": "^10.2.0"
   }
 }
